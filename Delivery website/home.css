@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+:root{
+    --orange:#F96F5D;
+    --white:#FFFAFF;
+    --dark-grey:#5a5c58;
+    --light-grey:#959792;
+}
+
+*{
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+body{
+background-color: var(--white);
+}
+
+ul{
+    list-style: none;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.container{
+    width: 85%;
+    height: 200vh;
+    margin: auto;
+    margin-top: 25px;
+}
+
+nav div i{
+    font-size: 65px;
+    color: var(--orange);
+    animation-name:car;
+    animation-duration: 2s;
+    position: relative;
+
+}
+
+@keyframes car {
+    0%{
+        left: -500px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+
+
+.menu-left span{
+    font-size: 29px;
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    
+}
+.menu-left{
+    display: flex;
+    align-items: center;
+    margin-right: 300px;
+}
+
+
+
+.menu-right ul{
+    display: flex;
+    flex-direction: row;
+    
+}
+.menu-right ul li{
+    padding:  10px 17px;
+    
+    
+   
+}
+
+.menu-right ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+.menu-right ul li:not(.signup) a{
+    color: black;
+}
+
+.menu-right ul li:not(.signup) a::before  {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    bottom: -3px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+    transform-origin: left;    
+}
+
+.menu-right ul li:not(.signup) a:hover::before{
+    transform: scaleX(1);
+}
+
+.signup{
+    background-color: var(--orange);
+    width: 150px;
+   margin-left: 50px;
+    text-align: center;
+    border-radius: 5px;   
+    position: relative;
+ }
+ .signup a{
+    color: var(--white);
+}
+.signup::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+.signup:hover::before{
+    transform: scaleX(1);
+    
+   
+}
+.signup:hover{
+    background-color: var(--white);
+    transition: background-color 300ms ease-in-out;
+}
+
+
+
+.signup:hover {
+    cursor: pointer;
+   
+}
+
+nav{
+    padding-bottom:30px ;
+  border-bottom:1px solid rgb(204, 200, 200);  
+}
+button{
+    background-color: var(--orange);
+    width: 150px;
+    border: none;
+    padding:  10px 17px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom:59px;
+}
+button a{
+    color: var(--white);
+}
+
+.showcase{
+    
+    width: 499px;
+    margin-top: 70px;
+}
+
+.showcase h1{
+    font-size: 47px;
+    margin-bottom:35px;
+}
+
+.showcase .detail{
+    color:var(--dark-grey);
+    font-size: 18px;
+    word-wrap: break-word;
+    font-weight: 500;
+    margin-bottom:35px;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    float:left;
+    margin-right: 5px;
+}
+
+.showcase .quote{
+    margin-bottom:20px;
+    font-weight: 450;
+    font-style: italic;
+    width: 400px;
+    font-size: 15px;
+    color:rgb(160, 157, 157);
+
+}
+
+.profile{
+    margin-bottom: 200px;
+}
+
+.profile h6{
+    font-size: 15px;
+}
+.profile p{
+    font-size: 12px;
+    font-weight: 500;
+    color: grey;
+}
+button:hover{
+cursor: pointer;
+}
+
+.scooter{
+    position:absolute;
+    top: 150px;
+    left: 600px;
+    width:35%;
+    /* filter: drop-shadow(0px 2px 3px black); */
+    animation-name: scooty;
+    animation-duration: 2s;
+   
+    
+    
+}
+
+@keyframes scooty {
+    0%{
+        top: -600px;
+
+    }
+
+    100%{
+        left: 600px;top: 150px;
+    }
+    
+    
+}
+
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 300px;
+    background-color: var(--orange);
+    border-radius: 10px;
+}
+
+.food-name,.food-price{
+font-size: 30px;
+font-weight: 500;
+}
+
+.place-order a{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.food-name,.food-price,.place-order{
+    padding: 6px;
+    color: black;
+
+}
+
+
+.pizza{
+    margin-right: 300px;
+}
+.burger{
+    margin-right: 300px;
+}
+
+.place-order a {
+    color: black;
+    display: inline-block;
+}
+.place-order a i{
+    margin-left: 5px;    
+}
+
+.place-order a:hover{
+    margin-bottom: 3px;
+}
+
+
+
+.food{
+    font-size: 100px;
+    margin-right: 10px;
+}
+
+
+
